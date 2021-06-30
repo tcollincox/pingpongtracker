@@ -71,8 +71,6 @@ export default {
       show: true,
       PlayerList: [],
       validation: false,
-      isClicked = false,
-      
     };
   },
   mounted() {
@@ -82,7 +80,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      if(this.form.selectedPlayerWinner != this.form.selectedPlayerLoser){
+      if(this.form.selectedPlayerWinner != this.form.selectedPlayerLoser && this.form.selectedPlayerWinner != null && this.form.selectedPlayerLoser != null){
       let newGame = {
         winner: this.form.selectedPlayerWinner,
         loser: this.form.selectedPlayerLoser,
@@ -91,9 +89,6 @@ export default {
       };
         Vue.axios
           .post("https://localhost:5001/games/addGame", newGame)
-          .then((response) => {
-            console.log(response);
-          })
           .catch((error) => {
             console.log(error);
           });
@@ -102,6 +97,7 @@ export default {
         this.form.winnerScore = 21;
         this.form.loserScore = 0;
         this.validation = false;
+        this.$emit('animateSubmit');
       }
       else{
         this.validation = true;
@@ -121,13 +117,6 @@ export default {
         this.show = true;
       });
     },
-    changeAnimate(){
-      this.isClicked = !this.isClicked;
-    },
-    timedChange(){
-      this.changeAnimate();
-      setTimeout(this.changeAnimate, 1500);
-    }
   },
 };
 </script>
@@ -151,8 +140,5 @@ button {
 .submitted{
   height: 100%;
 }
-.paddle-animate{
-   animation: tada;
-  animation-duration: 1s;
-}
+
 </style>

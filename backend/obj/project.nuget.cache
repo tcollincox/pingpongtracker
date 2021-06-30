@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "70mBSe9EG4OYOLl3L72RlgbA7CRJpa8FvyuS2uK2bfCFmRTNbJJCQ0mYd0/V7odtIljUrFciJhAKhVp4F9zmTQ==",
+  "dgSpecHash": "0j2k63Q2AVdRzcBmP0pWE2wnuh6JFUkB0UFcthaI7nkMlqS4IIQ1zJgfoNB7dL5Ytj11+uRP9tTAoKzXKZjtvw==",
   "success": true,
-  "projectFilePath": "C:\\users\\tcox\\testproj\\testproj.csproj",
+  "projectFilePath": "C:\\projects\\pingpongtracker\\backend\\testproj.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\tcox\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\tcox\\.nuget\\packages\\microsoft.aspnet.cors\\5.2.7\\microsoft.aspnet.cors.5.2.7.nupkg.sha512",

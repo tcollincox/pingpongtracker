@@ -97,6 +97,7 @@ export default {
           this.form.userName= ""
           this.form.color= null
           this.validationCheck = false;
+          this.$emit('animateSubmit');
       }
       else{
         this.validationCheck = true;
